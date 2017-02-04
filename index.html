@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Marvel Origins</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+  <script type="text/javascript" src="assets/javascript/logic.js"></script>
+  <script type="text/javascript" src="assets/javascript/jquery.ebayshoppingapi.js"></script>
+  <script src="https://blueimp.github.io/JavaScript-MD5/js/md5.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Squada+One" rel="stylesheet">
+</head>
+
+
+<body>
+
+<!-- Main Header -->
+<div class="container" id="header">
+    <div class="row">
+      <div class="col-md-12">
+          <img src="assets/images/custom_logo.jpg" width="100%" />    <!--Mobile-->
+     </div>
+    </div>
+    <div class="row"><p><br></p></div>
+</div>
+
+<!-- main container to hold nav and well -->
+<div class="container" id="main">
+<!-- Container for Well and Search Bar -->
+  <div class="row">
+  <!-- Container for Left Panels -->
+    <div class="col-md-3">
+      <div class="panel panel-warning">
+        <div class="panel-heading customfont"><strong>Search for Characters</strong></div>
+        <div class="panel-body">
+          <div class="form-group">
+            <label for="name-input" class="col-2 col-form-label">Enter Character Name</label>
+            <div class="col-10">
+              <input class="form-control" type="text" id="name-input">
+              <small id="search-help" class="text-muted">You must use the exact Marvel character name, ie: 'Spider-Man' not 'Spiderman'.
+              </small>
+            </div>
+          </div>
+          <button id="submit" class="btn btn-danger">Submit</button>
+        </div>
+      </div>
+
+       <!-- Container for Additional Stuff -->
+      <div class="panel panel-warning">
+        <div class="panel-heading customfont"><strong>Resent Searches</strong></div>
+        <div class="panel-body" id="buttonList">
+
+        
+        </div>
+      </div>
+    
+
+
+    <!-- Container for Additional Stuff -->
+      <div class="panel panel-warning">
+        <div class="panel-heading customfont"><strong>Additional Stuff</strong></div>
+        <div class="panel-body">
+        <button id="clear" class="btn btn-warning">Clear Cards</button>
+        </div>
+      </div>
+    
+
+    </div>
+
+  <!-- Container for Card Well -->
+    <div class="col-md-9">
+             <!-- Example Card -->
+          <div class="panel panel-danger">
+          <div class="panel-heading customfont" id="name-display" align="middle"><strong>Iron Man</strong></div>
+          <div class="panel-body">
+          <!-- Card Origin and Deatil Button -->
+            <div class="row">
+             <div class="col-md-8">
+               <div class="thumb" id="thumb" align="middle">
+                 <img align="middle" id="thumbnail" src="assets/images/marvelorigins.svg" width="100%">
+              </div>
+                <div id="origin-header" align="middle"><h3>Origin Story</h3></div>
+                <div class="well" id="origin-desc"><p></p>
+                </div>
+                <div id="origin-detail" align="middle">
+                <a href="http://marvel.com/characters/29/iron_man?utm_campaign=apiRef&utm_source=0b9403113749dd8e6c6efc4fd3b48e8e" target="_blank" class="btn btn-info" role="button" id="linkbutton">Character Details</a>
+                </div>
+                <div class="hidden-md hidden-lg" id="hidden-line"><hr></div>
+              
+              </div>
+
+               <!--  Shopping -->
+                <div class="col-md-4">
+                  <div class="customfont" id="shopping-title" align="middle">Super Fan Items<br><hr></div>
+                  <div class="shopping" id="shopping-items"></div>
+                </div>
+            </div>
+          </div>
+        <!--  End Shopping -->
+      <!--  End Example Card -->
+
+          </div>
+        </div>
+     
+
+
+</div>
+</div>
+
+<!-- group -->
+<div class="container text-center">
+  <div class="panel panel-danger">
+        <div class="panel-heading customfont">Super Group Members</div>
+        <div class="panel-body">
+          <!-- Team Card - Austin  -->
+          <div class="col-sm-3">
+            <div class="card hovercard">
+            <div class="cardheaderdir4">&nbsp;</div>
+            <div class="avatar"><img alt="Austin Ignaczak" src="assets/images/austin.jpg"></div>
+            <div class="info">
+              <div class="title">Austin Ignaczak</div>
+              <div class="desc">Back End Development</div>
+              <div class="desc"><strong>GitHub:</strong>&nbsp; AustinIgnaczak<br><strong>E-Mail:&nbsp;</strong>&nbsp;<a href="mailto:Austin.Ignaczak@yahoo.com">Austin.Ignaczak@yahoo.com</a></div>
+            </div>
+            </div>
+          </div>
+
+
+          <!-- Team Card - Conner -->
+          <div class="col-sm-3">
+            <div class="card hovercard">
+            <div class="cardheaderdir1">&nbsp;</div>
+            <div class="avatar"><img alt="Connor Hoy" src="assets/images/connor.jpg"></div>
+            <div class="info">
+              <div class="title">Connor Hoy</div>
+              <div class="desc">Back End Development</div>
+              <div class="desc"><strong>GitHub:</strong>&nbsp; ConnorHoy<br><strong>E-Mail:&nbsp;</strong>&nbsp;<a href="mailto:connorhoy116@gmail.com">connorhoy116@gmail.com</a></div>
+            </div>
+            </div>
+          </div>
+
+          <!-- Team Card - Eric  -->
+          <div class="col-sm-3">
+            <div class="card hovercard">
+            <div class="cardheaderdir3">&nbsp;</div>
+            <div class="avatar"><img alt="Eric Tucker" src="assets/images/eric.jpg"></div>
+            <div class="info">
+              <div class="title">Eric Tucker</div>
+              <div class="desc">Front End Development & Graphic Design</div>
+              <div class="desc"><strong>GitHub:</strong>&nbsp; etcreative<br><strong>E-Mail:&nbsp;</strong>&nbsp;<a href="mailto:etcreative@gmail.com">etcreative@gmail.com</a></div>
+            </div>
+            </div>
+          </div>
+
+
+          <!-- Team Card - Jasmine  -->
+          <div class="col-sm-3">
+            <div class="card hovercard">
+            <div class="cardheaderdir2">&nbsp;</div>
+            <div class="avatar"><img alt="Jasmine Bishop" src="assets/images/jasmine.jpg"></div>
+            <div class="info">
+              <div class="title">Jasmine Bishop</div>
+              <div class="desc">Front End Development & CSS</div>
+              <div class="desc"><strong>GitHub:</strong>&nbsp; jerezapo<br><strong>E-Mail:&nbsp;</strong>&nbsp;<a href="mailto:jasminerezapour@gmail.com">jasminerezapour@gmail.com</a></div>
+            </div>
+            </div>
+          </div>
+
+
+
+            </div>        
+        </div>
+  </div>
+</div>
+
+
+
+</body>
+</html>
